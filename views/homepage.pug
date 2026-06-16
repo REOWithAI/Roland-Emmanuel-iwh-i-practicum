@@ -1,0 +1,20 @@
+﻿doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Movies Collection
+    a(href='/update-cobj') Add to this table
+    table
+      thead
+        tr
+          th Name
+          th Genre
+          th Release Year
+      tbody
+        each movie in data
+          tr
+            td= movie.properties.name
+            td= movie.properties.genre
+            td= movie.properties.release_year
